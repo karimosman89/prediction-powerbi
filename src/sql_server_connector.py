@@ -2,7 +2,7 @@ import pyodbc
 import pandas as pd
 
 def connect_sql_server(server, database, username, password):
-    """Connect to SQL Server or Azure SQL Database."""
+    """Connect to SQL Server or Azure SQL Database. or AWS Database or GCD"""
     conn = pyodbc.connect(
         f'DRIVER={{SQL Server}};SERVER={server};DATABASE={database};UID={username};PWD={password}')
     return conn
